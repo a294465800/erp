@@ -1,0 +1,20 @@
+{
+  "name": "erp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SHININGJACK",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "gulp": "^3.9.1",
+    "semantic-ui": "^2.2.13"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "gulp-babel": "^7.0.0"
+  }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="../../plugin/semantic/dist/semantic.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script src="../../plugin/semantic/dist/semantic.min.js"></script>
+  <title>登录</title>
+
+  <style type="text/css">
+    body {
+      background-color: #DADADA;
+    }
+
+    body>.grid {
+      height: 100%;
+    }
+
+    .image {
+      margin-top: -100px;
+    }
+
+    .column {
+      max-width: 450px;
+    }
+  </style>
+  <script>
+    $(document)
+      .ready(function () {
+        $('.ui.form')
+          .form({
+            fields: {
+              phone: {
+                identifier: 'phone',
+                rules: [{
+                    type: 'empty',
+                    prompt: '请输入你的手机号'
+                  },
+                  {
+                    type: 'regExp[/^1(\\d{10})$/]',
+                    prompt: '请输入正确的手机号！'
+                  }
+                ]
+              },
+              password: {
+                identifier: 'password',
+                rules: [{
+                    type: 'empty',
+                    prompt: '请输入你的密码'
+                  },
+                  {
+                    type: 'length[6]',
+                    prompt: '密码至少 6 位'
+                  }
+                ]
+              }
+            }
+          });
+      });
+  </script>
+</head>
+
+<body>
+
+  <div class="ui middle aligned center aligned grid">
+    <div class="column">
+      <h2 class="ui blue image header">
+        <div class="content">登录</div>
+      </h2>
+      <form class="ui large form ">
+        <div class="ui stacked segment">
+          <div class="field">
+            <div class="ui left icon input">
+              <i class="user icon"></i>
+              <input type="text" name="phone" placeholder="输入登录手机号">
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui left icon input">
+              <i class="lock icon"></i>
+              <input type="password" name="password" placeholder="输入密码">
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui left icon input action">
+              <i class="keyboard icon"></i>
+              <input type="text" name="sms" placeholder="验证码">
+              <button class="ui button disabled blue">获取验证码</button>
+            </div>
+          </div>
+          <div class="ui fluid large blue submit button">登录</div>
+        </div>
+
+        <div class="ui error message"></div>
+
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

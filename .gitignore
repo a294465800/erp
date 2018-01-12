@@ -1,0 +1,7 @@
+node_modules/
+/public/plugin/semantic/src
+/public/plugin/semantic/tasks
+/public/plugin/semantic/gulpfile.js
+.vscode/
+semantic.json
+/public/assets
