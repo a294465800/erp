@@ -2,6 +2,7 @@ const gulp = require('gulp')
 const sourcemaps = require('gulp-sourcemaps')
 // devs
 const babel = require('gulp-babel')
+const uglify = require('gulp-uglify')
 const rename = require('gulp-rename')
 const clean = require('gulp-clean')
 const concat = require('gulp-concat')
@@ -16,6 +17,7 @@ gulp.task('build-babel', () => {
     .pipe(babel({
       presets: ['env']
     }))
+    .pipe(uglify())
     .pipe(gulp.dest('public/dist/js/'))
 })
 
@@ -65,3 +67,6 @@ gulp.task('clean-views', () => {
 // the whole task
 gulp.task('clean', ['clean-dist', 'clean-views'])
 gulp.task('build', ['build-babel', 'build-css', 'build-blade'])
+gulp.task('watch', () => {
+  gulp.watch('public/assets/**/*', ['build-babel', 'build-css'])
+})
