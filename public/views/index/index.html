@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- 全局依赖 ==== 所有页面都要有 -->
+  <link rel="stylesheet" type="text/css" href="../../plugin/semantic/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="../../dist/css/erp.css">
+  <!-- /全局依赖 -->
+  <title>首页</title>
+</head>
+
+<body id="index">
+  <!-- 通用布局 === 复用 -->
+  <div class="index-navbar ui menu blue-background">
+    <span id="sidebarBtn" class="index-navbar-item-left pull-left">
+      <i class="sidebar icon"></i>
+      <span>森乾科技</span>
+    </span>
+    <div class="index-navbar-item-show right menu">
+      <a class="item">
+        <i class="user icon"></i>
+        <span>管理员</span>
+      </a>
+      <a class="item">
+        <i class="help circle icon"></i>
+        <span>帮助</span>
+      </a>
+      <a class="item">
+        <i class="sound icon"></i>
+        <span>客服</span>
+      </a>
+      <a class="item">
+        <i class="power icon"></i>
+        <span>退出</span>
+      </a>
+    </div>
+    <div class="index-navbar-item-hidden margin-right ui dropdown">操作
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <a class="item" href="#">
+          <i class="user icon"></i>
+          <span>管理员</span>
+        </a>
+        <a class="item">
+          <i class="help circle icon"></i>
+          <span>帮助</span>
+        </a>
+        <a class="item">
+          <i class="sound icon"></i>
+          <span>客服</span>
+        </a>
+        <a class="item">
+          <i class="power icon"></i>
+          <span>退出</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="index-aside">
+    <div class="ui index-aside-style accordion">
+      <div class="title">
+        <i class="dropdown icon"></i>
+        <span>菜单一</span>
+      </div>
+      <div class="content">
+        <div class="ui secondary vertical menu transition hidden">
+          <a class="active item">账号 </a>
+          <a class="item">Settings </a>
+        </div>
+      </div>
+      <div class="title">
+        <i class="dropdown icon"></i>
+        <span>菜单二</span>
+      </div>
+      <div class="content">
+        <div class="ui secondary vertical menu">
+          <a class="active item">账号 </a>
+          <a class="item">Settings </a>
+        </div>
+      </div>
+      <div class="title">
+        <i class="dropdown icon"></i>
+        <span>菜单三</span>
+      </div>
+      <div class="content">
+        <div class="ui secondary vertical menu transition hidden">
+          <a class="active item">账号 </a>
+          <a class="item">Settings </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /通用布局 -->
+
+  <!-- 主体内容 === 不可复用 -->
+  <div class="index-content">
+
+    <div class="ui three item menu">
+      <a class="item">社论</a>
+      <a class="item active">Reviews</a>
+      <a class="item">即将举办的活动</a>
+    </div>
+  </div>
+  <!-- /主体内容 === 不可复用 -->
+
+  <!-- 全局依赖 js === 通用 -->
+  <script src="../../plugin/jquery/jquery.3.2.1.min.js"></script>
+  <script src="../../plugin/semantic/dist/semantic.min.js"></script>
+  <script src="../../dist/js/global.js"></script>
+  <!-- / 全局依赖 js === 通用 -->
+
+  <!-- 独立 js -->
+  <script src="../../dist/js/index.js"></script>
+  <!-- / 独立 js -->
+</body>
+
+</html>

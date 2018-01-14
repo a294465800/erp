@@ -6,16 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <!-- 全局依赖 ==== 所有页面都要有 -->
+  <!-- 全局依赖 css ==== 所有页面都要有 -->
   <link rel="stylesheet" type="text/css" href="../../plugin/semantic/dist/semantic.min.css">
   <link rel="stylesheet" type="text/css" href="../../dist/css/erp.css">
-  <script src="../../plugin/jquery/jquery.3.2.1.min.js"></script>
-  <script src="../../plugin/semantic/dist/semantic.min.js"></script>
   <!-- /全局依赖 -->
   <title>登录</title>
 </head>
 
 <body id="login">
+  <div class="pull-right ui dropdown">展开
+    <i class="dropdown icon"></i>
+    <div class="menu">
+      <div class="item">Choice 1</div>
+      <div class="disabled item">Disabled</div>
+      <div class="item">Choice 3</div>
+    </div>
+  </div>
   <div class="ui middle aligned center aligned grid">
     <div class="column">
       <h2 class="ui blue image header">
@@ -50,6 +56,13 @@
       </form>
     </div>
   </div>
+
+  <!-- 全局依赖 js === 通用 -->
+  <script src="../../plugin/jquery/jquery.3.2.1.min.js"></script>
+  <script src="../../plugin/semantic/dist/semantic.min.js"></script>
+  <script src="../../dist/js/global.js"></script>
+  <!-- / 全局依赖 js === 通用 -->
+  
 
   <!-- 独立 js === 每个页面独有-->
   <script src="../../dist/js/login.js"></script>
