@@ -1,1 +1,1 @@
-"use strict";$(document).ready(function(){$(".ui.dropdown").dropdown(),$(".ui.accordion").accordion();var o=$("#sidebarBtn"),i=$(".index-aside");o.on("click",function(){i.toggleClass("active")})});
+"use strict";$(document).ready(function(){$(".ui.dropdown").dropdown(),$(".ui.accordion").accordion();var i=$("#sidebarBtn"),n=$(".index-aside");i.on("click",function(){n.toggleClass("active")});var c=$(".index-aside .content a.item");c.on("click",function(){c.removeClass("active"),$(this).addClass("active")})});
