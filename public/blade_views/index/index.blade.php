@@ -63,12 +63,16 @@
   <div class="index-aside">
     <div class="ui vertical index-aside-style accordion menu">
       <div class="item">
-        <div class="title">首页</div>
+        <div class="title">
+          <span>
+            <i class="icon home"></i>首页</span>
+        </div>
       </div>
       <div class="item">
         <div class="title">
           <i class="dropdown icon"></i>
-          <span>项目立项管理</span>
+          <span>
+            <i class="icon sticky note"></i>项目立项管理</span>
         </div>
         <div class="content">
           <div class="ui secondary vertical menu transition hidden">
@@ -80,7 +84,8 @@
       <div class="item">
         <div class="title">
           <i class="dropdown icon"></i>
-          <span>验收与收款管理</span>
+          <span>
+            <i class="icon suitcase"></i>验收与收款管理</span>
         </div>
         <div class="content">
           <div class="ui secondary vertical menu">
@@ -92,7 +97,8 @@
       <div class="item">
         <div class="title">
           <i class="dropdown icon"></i>
-          <span>采购管理</span>
+          <span>
+            <i class="icon shopping basket"></i>采购管理</span>
         </div>
         <div class="content">
           <div class="ui secondary vertical menu transition hidden">
@@ -106,7 +112,8 @@
       <div class="item">
         <div class="title">
           <i class="dropdown icon"></i>
-          <span>库存管理</span>
+          <span>
+            <i class="archive icon"></i>库存管理</span>
         </div>
         <div class="content">
           <div class="ui secondary vertical menu transition hidden">
@@ -120,7 +127,8 @@
       <div class="item">
         <div class="title">
           <i class="dropdown icon"></i>
-          <span>施工管理</span>
+          <span>
+            <i class="icon legal"></i>施工管理</span>
         </div>
         <div class="content">
           <div class="ui secondary vertical menu transition hidden">
@@ -135,7 +143,7 @@
       <div class="item">
         <div class="title">
           <i class="dropdown icon"></i>
-          <span>报销与借款管理</span>
+          <span><i class="icon ordered list"></i>报销与借款管理</span>
         </div>
         <div class="content">
           <div class="ui secondary vertical menu transition hidden">
@@ -146,7 +154,8 @@
       <div class="item">
         <div class="title">
           <i class="dropdown icon"></i>
-          <span>费用付款管理</span>
+          <span>
+            <i class="icon yen"></i>费用付款管理</span>
         </div>
         <div class="content">
           <div class="ui secondary vertical menu transition hidden">
@@ -157,7 +166,8 @@
       <div class="item">
         <div class="title">
           <i class="dropdown icon"></i>
-          <span>数据维护</span>
+          <span>
+            <i class="icon database"></i>数据维护</span>
         </div>
         <div class="content">
           <div class="ui secondary vertical menu transition hidden">
@@ -178,6 +188,9 @@
   <!-- 主体内容 === 不可复用 -->
   <div class="index-content">
     页面具体内容
+    <i class="icon home"></i>
+    <i class="icon sticky note"></i>
+    <i class="archive icon"></i>
   </div>
   <!-- /主体内容 === 不可复用 -->
 
