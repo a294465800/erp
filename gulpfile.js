@@ -8,7 +8,8 @@ const clean = require('gulp-clean')
 const concat = require('gulp-concat')
 const less = require('gulp-less')
 const cssMinify = require('gulp-clean-css')
-const autoprefixer = require('gulp-autoprefixer');
+const autoprefixer = require('gulp-autoprefixer')
+const htmlInclude = require('gulp-tag-include')
 
 // ES6 => ES5
 gulp.task('build-babel', () => {
@@ -40,7 +41,7 @@ gulp.task('build-css', () => {
 
 gulp.task('build-blade', () => {
   console.info('Starting build blade.php files...')
-  gulp.src('public/views/**/*.html')
+  gulp.src('public/tmp/**/*.html')
     .pipe(rename(path => {
       path.extname = '.blade.php'
     }))
@@ -64,9 +65,19 @@ gulp.task('clean-views', () => {
     .pipe(clean())
 })
 
+//replace template
+gulp.task('build-template', () => {
+  console.info('Starting replace html...')
+  gulp.src('public/tmp/!(template)/*.html')
+    // gulp.src('public/tmp/index.html')
+    .pipe(htmlInclude())
+    .pipe(gulp.dest('public/views'))
+})
+
 // the whole task
 gulp.task('clean', ['clean-dist', 'clean-views'])
 gulp.task('build', ['build-babel', 'build-css', 'build-blade'])
 gulp.task('watch', () => {
-  gulp.watch('public/assets/**/*', ['build-babel', 'build-css'])
+  gulp.watch('public/assets/**/*', ['build-babel', 'build-css', 'build-template'])
+  gulp.watch('public/tmp', ['build-template'])
 })

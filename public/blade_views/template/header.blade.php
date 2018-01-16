@@ -6,12 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <!-- 全局依赖 ==== 所有页面都要有 -->
-<link rel="stylesheet" type="text/css" href="../../plugin/semantic/dist/semantic.min.css">
-<link rel="stylesheet" type="text/css" href="../../dist/css/erp.css">
-<!-- /全局依赖 -->
+  <include src="./commonCss.html"></include>
 
-  <title>首页</title>
+  <title>{{ title }}</title>
 </head>
 
 <body id="index">
@@ -189,21 +186,3 @@
 
   <!-- 主体内容 === 不可复用 -->
   <div class="index-content">
-
-<div>这是具体内容</div>
-
-</div>
-<!-- /主体内容 === 不可复用 -->
-
-<!-- 全局依赖 js === 通用 -->
-<script src="../../plugin/jquery/jquery.3.2.1.min.js">
-</script>
-<script src="../../plugin/semantic/dist/semantic.min.js"></script>
-<script src="../../dist/js/global.js"></script>
-<!-- / 全局依赖 js === 通用 -->
-<!-- 独立 js -->
-<script src="../../dist/js/index.js"></script>
-<!-- / 独立 js -->
-</body>
-
-</html>

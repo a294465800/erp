@@ -5,3 +5,4 @@ node_modules/
 .vscode/
 semantic.json
 /public/assets
+/public/tmp
