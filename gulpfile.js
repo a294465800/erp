@@ -69,7 +69,6 @@ gulp.task('clean-views', () => {
 gulp.task('build-template', () => {
   console.info('Starting replace html...')
   gulp.src('public/tmp/!(template)/*.html')
-    // gulp.src('public/tmp/index.html')
     .pipe(htmlInclude())
     .pipe(gulp.dest('public/views'))
 })
@@ -79,5 +78,5 @@ gulp.task('clean', ['clean-dist', 'clean-views'])
 gulp.task('build', ['build-babel', 'build-css', 'build-blade'])
 gulp.task('watch', () => {
   gulp.watch('public/assets/**/*', ['build-babel', 'build-css', 'build-template'])
-  gulp.watch('public/tmp', ['build-template'])
+  gulp.watch('public/tmp/**/*', ['build-template'])
 })

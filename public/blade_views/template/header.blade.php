@@ -60,27 +60,27 @@
   </div>
   <div class="index-aside">
     <div class="ui vertical index-aside-style accordion menu">
-      <div class="item">
-        <div class="title" id="navIndex">
+      <div class="item" id="navIndex">
+        <a class="title" href="../index/index.html">
           <span>
             <i class="icon home"></i>首页</span>
-        </div>
+        </a>
       </div>
-      <div class="item">
-        <div class="title" id="navProject">
+      <div class="item" id="navProject">
+        <div class="title">
           <i class="dropdown icon"></i>
           <span>
             <i class="icon sticky note"></i>项目立项管理</span>
         </div>
         <div class="content">
-          <div class="ui secondary vertical menu transition hidden">
+          <div class="ui secondary vertical menu">
             <a class="item detail">项目明细清单</a>
-            <a class="item list">已立项清单</a>
+            <a class="item list" href="../project/detail.html">已立项清单</a>
           </div>
         </div>
       </div>
-      <div class="item">
-        <div class="title" id="navCheck">
+      <div class="item" id="navCheck">
+        <div class="title">
           <i class="dropdown icon"></i>
           <span>
             <i class="icon suitcase"></i>验收与收款管理</span>
@@ -92,14 +92,14 @@
           </div>
         </div>
       </div>
-      <div class="item">
-        <div class="title" id="navBuy">
+      <div class="item" id="navBuy">
+        <div class="title">
           <i class="dropdown icon"></i>
           <span>
             <i class="icon shopping basket"></i>采购管理</span>
         </div>
         <div class="content">
-          <div class="ui secondary vertical menu transition hidden">
+          <div class="ui secondary vertical menu">
             <a class="item list">采购清单</a>
             <a class="item project-list">采购立项清单</a>
             <a class="item pay-list">采购付款清单</a>
@@ -107,14 +107,14 @@
           </div>
         </div>
       </div>
-      <div class="item">
-        <div class="title" id="navStock">
+      <div class="item" id="navStock">
+        <div class="title">
           <i class="dropdown icon"></i>
           <span>
             <i class="archive icon"></i>库存管理</span>
         </div>
         <div class="content">
-          <div class="ui secondary vertical menu transition hidden">
+          <div class="ui secondary vertical menu">
             <a class="item list">库存清单</a>
             <a class="item buy-list">采购收货清单</a>
             <a class="item return-list">退料入货清单</a>
@@ -122,14 +122,14 @@
           </div>
         </div>
       </div>
-      <div class="item">
-        <div class="title" id="navBuild">
+      <div class="item" id="navBuild">
+        <div class="title">
           <i class="dropdown icon"></i>
           <span>
             <i class="icon legal"></i>施工管理</span>
         </div>
         <div class="content">
-          <div class="ui secondary vertical menu transition hidden">
+          <div class="ui secondary vertical menu">
             <a class="item list">施工费清单</a>
             <a class="item deal-list">备案合同清单</a>
             <a class="item finish-list">完工请款清单</a>
@@ -138,38 +138,38 @@
           </div>
         </div>
       </div>
-      <div class="item">
-        <div class="title" id="navLoan">
+      <div class="item" id="navLoan">
+        <div class="title">
           <i class="dropdown icon"></i>
           <span>
             <i class="icon ordered list"></i>报销与借款管理</span>
         </div>
         <div class="content">
-          <div class="ui secondary vertical menu transition hidden">
+          <div class="ui secondary vertical menu">
             <a class="item list">报销与借款清单</a>
           </div>
         </div>
       </div>
-      <div class="item">
-        <div class="title" id="navPay">
+      <div class="item" id="navPay">
+        <div class="title">
           <i class="dropdown icon"></i>
           <span>
             <i class="icon yen"></i>费用付款管理</span>
         </div>
         <div class="content">
-          <div class="ui secondary vertical menu transition hidden">
+          <div class="ui secondary vertical menu">
             <a class="item list">付款审批清单</a>
           </div>
         </div>
       </div>
-      <div class="item">
-        <div class="title" id="navData">
+      <div class="item" id="navData">
+        <div class="title">
           <i class="dropdown icon"></i>
           <span>
             <i class="icon database"></i>数据维护</span>
         </div>
         <div class="content">
-          <div class="ui secondary vertical menu transition hidden">
+          <div class="ui secondary vertical menu">
             <a class="item auth">人员权限</a>
             <a class="item supplier">供应商</a>
             <a class="item materiel">物料</a>
