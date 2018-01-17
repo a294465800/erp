@@ -8,9 +8,38 @@
   <div class="active section">已立项清单</div>
 </div>
 
+<!-- 操作区域 -->
+<div class="content-operation flex-row flex-between">
+  <div>
+    <a class="ui primary button" href="#">
+      <i class="icon plus"></i>
+      <span>新建立项</span>
+    </a>
+    <a class="ui green button" href="#">
+      <i class="icon download"></i>
+      <span>Excel 导出</span>
+    </a>
+  </div>
+  <div class="ui left action right input fluid flex-fluid">
+    <div class="ui button white dropdown ">
+      <input name="seartch-type" type="hidden">
+      <div class="text">请选中搜索内容</div>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <div class="item" data-value="1">项目号</div>
+        <div class="item" data-value="2">项目内容</div>
+        <div class="item" data-value="3">甲方</div>
+      </div>
+    </div>
+    <input type="text" placeholder="搜索内容" value="">
+    <button class="ui button">搜索</button>
+  </div>
+</div>
+<!-- / 操作区域 -->
+
 <div class="content-wrap">
 
-  <table class="ui striped table">
+  <table class="ui striped table" id="projectDetailTable">
     <thead>
       <tr>
         <th>项目号</th>
