@@ -63,7 +63,7 @@
 
 
   <!-- 独立 js === 每个页面独有-->
-  <script src="../../dist/js/login.js"></script>
+  <script src="../../src/js/login.js"></script>
   <!-- /独立 js -->
 </body>
 

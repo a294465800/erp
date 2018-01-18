@@ -19,7 +19,7 @@ gulp.task('build-babel', () => {
       presets: ['env']
     }))
     .pipe(uglify())
-    .pipe(gulp.dest('public/dist/js/'))
+    .pipe(gulp.dest('public/src/js/'))
 })
 
 // css concat and minify
@@ -34,7 +34,7 @@ gulp.task('build-css', () => {
       compatibility: 'ie8'
     }))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('public/dist/css/'));
+    .pipe(gulp.dest('public/src/css/'));
 })
 
 // html => blade.php
@@ -49,9 +49,9 @@ gulp.task('build-blade', () => {
 })
 
 // clean task, remove all files before tasks
-gulp.task('clean-dist', () => {
-  console.info('Starting clean up all files in folder dist...')
-  return gulp.src('public/dist', {
+gulp.task('clean-src', () => {
+  console.info('Starting clean up all files in folder src...')
+  return gulp.src('public/src', {
       read: false
     })
     .pipe(clean())
@@ -74,7 +74,7 @@ gulp.task('build-template', () => {
 })
 
 // the whole task
-gulp.task('clean', ['clean-dist', 'clean-views'])
+gulp.task('clean', ['clean-src', 'clean-views'])
 gulp.task('build', ['build-babel', 'build-css', 'build-blade'])
 gulp.task('watch', () => {
   gulp.watch('public/assets/**/*', ['build-babel', 'build-css', 'build-template'])

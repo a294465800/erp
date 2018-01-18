@@ -5,5 +5,5 @@
 <div>这是具体内容</div>
 
 <include src="../template/footer.html">
-  @js = ../../dist/js/index.js
+  @js = ../../src/js/index.js
 </include>

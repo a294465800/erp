@@ -11,7 +11,7 @@
 <!-- 操作区域 -->
 <div class="content-operation flex-row flex-between">
   <div>
-    <a class="ui primary button" href="#">
+    <a class="ui primary button" href="../project/create.html">
       <i class="icon plus"></i>
       <span>新建立项</span>
     </a>
@@ -113,5 +113,5 @@
 </div>
 
 <include src="../template/footer.html">
-  @js = ../../dist/js/project_detail.js
+  @js = ../../src/js/project_detail.js
 </include>
