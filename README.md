@@ -18,10 +18,10 @@ npm run build     // build assets, create blade_views, src, views folder
   |--/src  (打包压缩 assets 后的资源)
   |--/tmp  (写页面的临时文件夹)
   |--/views  (打包后能访问的正常 html)
-  |--.gitignore
-  |--gulpfile.js
-  |--package-lock.json
-  |--package.json
-  |--README.md
-  |--semantic.json
+.gitignore
+gulpfile.js
+package-lock.json
+package.json
+README.md
+semantic.json
 ```
