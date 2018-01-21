@@ -207,7 +207,7 @@
       <div class="inline fields">
         <div class="eight wide field fields">
           <label class="five wide field">立项日期</label>
-          <input name="signDate" id="creatDate" type="text" placeholder="请选择立项日期">
+          <input name="signDate" id="createDate" type="text" placeholder="请选择立项日期">
         </div>
         <div class="eight wide field fields">
           <label class="five wide field">项目名</label>
@@ -230,7 +230,7 @@
       <div class="inline fields">
         <div class="eight wide field fields">
           <label class="five wide field">预计完工日期</label>
-          <input name="completeDate" id="finishDate" type="text" placeholder="请选择预计完工日期">
+          <input name="completeDate" id="completeDate" type="text" placeholder="请选择预计完工日期">
         </div>
         <div class="eight wide field fields">
           <label class="five wide field">项目经理</label>
@@ -243,16 +243,16 @@
     <!-- 中标情况 -->
     <h4 class="ui dividing header violet">合同中标情况</h4>
     <div class="form-wrap" id="winBid">
-      <div class="win-item" data-id=1 data-name="masterCompany">
+      <div class="win-item data-dom" data-id=1 data-index=0 data-name="masterCompany">
         <div class="inline fields">
           <div class="eight wide field fields">
             <label class="five wide field">单位名称</label>
-            <input name="masterCompany.name" type="text" placeholder="请输入单位名称" class="win-company">
+            <input name="masterCompany[index].name" type="text" placeholder="请输入单位名称" class="win-company">
           </div>
           <div class="eight wide field fields">
             <label class="five wide field">金额</label>
             <div class="ui right labeled input">
-              <input name="masterCompany.amount" type="number" placeholder="请输入金额">
+              <input name="masterCompany[index].amount" type="number" placeholder="请输入金额">
               <div class="ui basic label">￥</div>
             </div>
           </div>
@@ -260,7 +260,7 @@
         <div class="inline fields">
           <div class="eight wide field fields">
             <label class="five wide field">备注</label>
-            <textarea name="masterCompany.remark" rows="2" placeholder="请输入备注"></textarea>
+            <textarea name="masterCompany[index].remark" rows="2" placeholder="请输入备注"></textarea>
           </div>
           <div class="eight wide field fields relative">
             <div class="win-remove-btn ui button red">
@@ -286,16 +286,16 @@
     <!-- 分包情况 -->
     <h4 class="ui dividing header blue">分包情况</h4>
     <div class="form-wrap" id="divideBid">
-      <div class="win-item" data-id=1 data-name="subCompany">
+      <div class="win-item data-dom" data-id=1 data-index=0 data-name="subCompany">
         <div class="inline fields">
           <div class="eight wide field fields">
             <label class="five wide field">发包单位</label>
-            <input name="subCompany.name" type="text" placeholder="请输入发包单位" class="win-company">
+            <input name="subCompany[index].name" type="text" placeholder="请输入发包单位" class="win-company">
           </div>
           <div class="eight wide field fields">
             <label class="five wide field">分包金额</label>
             <div class="ui right labeled input">
-              <input name="subCompany.amount" type="number" placeholder="请输入分包金额">
+              <input name="subCompany[index].amount" type="number" placeholder="请输入分包金额">
               <div class="ui basic label">￥</div>
             </div>
           </div>
@@ -303,7 +303,7 @@
         <div class="inline fields">
           <div class="eight wide field fields">
             <label class="five wide field">备注</label>
-            <textarea name="subCompany.remark" rows="2" placeholder="请输入备注"></textarea>
+            <textarea name="subCompany[index].remark" rows="2" placeholder="请输入备注"></textarea>
           </div>
           <div class="eight wide field fields relative">
             <div class="win-remove-btn ui button red">
@@ -344,23 +344,23 @@
             </div>
           </div>
         </div>
-        <div class="field detail-item" data-id=1 data-name="masterContract.details">
+        <div class="field detail-item data-dom" data-id=1 data-index=0 data-name="masterContract.details[index]">
           <div class="three fields">
             <div class="field">
               <label>内容名称</label>
-              <input class="masterContract.details.name" type="text" name="project_item" placeholder="请输入内容名称">
+              <input class="masterContract.details[index].name" type="text" name="project_item" placeholder="请输入内容名称">
             </div>
             <div class="field">
               <label>税率</label>
               <div class="ui right labeled input">
-                <input type="number" name="masterContract.details.tax" placeholder="税率">
+                <input type="number" name="masterContract.details[index].tax" placeholder="税率">
                 <div class="ui basic label">%</div>
               </div>
             </div>
             <div class="field">
               <label>金额</label>
               <div class="ui right labeled input">
-                <input type="number" name="masterContract.details.amount" placeholder="金额">
+                <input type="number" name="masterContract.details[index].amount" placeholder="金额">
                 <div class="ui basic label">￥</div>
               </div>
             </div>
@@ -368,7 +368,7 @@
           <div class="two fields">
             <div class="field">
               <label>备注</label>
-              <textarea name="masterContract.details.remark" rows="2" placeholder="请输入备注"></textarea>
+              <textarea name="masterContract.details[index].remark" rows="2" placeholder="请输入备注"></textarea>
             </div>
             <div class="field relative">
               <label class="invisible">按钮</label>
@@ -394,23 +394,23 @@
             </div>
           </div>
         </div>
-        <div class="field detail-item" data-id=1 data-name="masterContractAppend.details">
+        <div class="field detail-item data-dom" data-id=1 data-index=0 data-name="masterContractAppend.details[index]">
           <div class="three fields">
             <div class="field">
               <label>内容名称</label>
-              <input class="masterContractAppend.details.name" type="text" name="project_item" placeholder="请输入内容名称">
+              <input class="masterContractAppend.details[index].name" type="text" name="project_item" placeholder="请输入内容名称">
             </div>
             <div class="field">
               <label>税率</label>
               <div class="ui right labeled input">
-                <input type="number" name="masterContractAppend.details.tax" placeholder="税率">
+                <input type="number" name="masterContractAppend.details[index].tax" placeholder="税率">
                 <div class="ui basic label">%</div>
               </div>
             </div>
             <div class="field">
               <label>金额</label>
               <div class="ui right labeled input">
-                <input type="number" name="masterContractAppend.details.amount" placeholder="金额">
+                <input type="number" name="masterContractAppend.details[index].amount" placeholder="金额">
                 <div class="ui basic label">￥</div>
               </div>
             </div>
@@ -418,7 +418,7 @@
           <div class="two fields">
             <div class="field">
               <label>备注</label>
-              <textarea name="masterContractAppend.details.remark" rows="2" placeholder="请输入备注"></textarea>
+              <textarea name="masterContractAppend.details[index].remark" rows="2" placeholder="请输入备注"></textarea>
             </div>
             <div class="field relative">
               <label class="invisible">按钮</label>
@@ -459,23 +459,23 @@
             </div>
           </div>
         </div>
-        <div class="field detail-item" data-id=1 data-name="subContract.details">
+        <div class="field detail-item data-dom" data-id=1 data-index=0 data-name="subContract.details[index]">
           <div class="three fields">
             <div class="field">
               <label>内容名称</label>
-              <input class="subContract.details.name" type="text" name="project_item" placeholder="请输入内容名称">
+              <input class="subContract.details[index].name" type="text" name="project_item" placeholder="请输入内容名称">
             </div>
             <div class="field">
               <label>税率</label>
               <div class="ui right labeled input">
-                <input type="number" name="subContract.details.tax" placeholder="税率">
+                <input type="number" name="subContract.details[index].tax" placeholder="税率">
                 <div class="ui basic label">%</div>
               </div>
             </div>
             <div class="field">
               <label>金额</label>
               <div class="ui right labeled input">
-                <input type="number" name="subContract.details.amount" placeholder="金额">
+                <input type="number" name="subContract.details[index].amount" placeholder="金额">
                 <div class="ui basic label">￥</div>
               </div>
             </div>
@@ -483,7 +483,7 @@
           <div class="two fields">
             <div class="field">
               <label>备注</label>
-              <textarea name="subContract.details.remark" rows="2" placeholder="请输入备注"></textarea>
+              <textarea name="subContract.details[index].remark" rows="2" placeholder="请输入备注"></textarea>
             </div>
             <div class="field relative">
               <label class="invisible">按钮</label>
@@ -509,23 +509,23 @@
             </div>
           </div>
         </div>
-        <div class="field detail-item" data-id=1 data-name="subContractAppend.details">
+        <div class="field detail-item data-dom" data-id=1 data-index=0 data-name="subContractAppend.details[index]">
           <div class="three fields">
             <div class="field">
               <label>内容名称</label>
-              <input class="subContractAppend.details.name" type="text" name="project_item" placeholder="请输入内容名称">
+              <input class="subContractAppend.details[index].name" type="text" name="project_item" placeholder="请输入内容名称">
             </div>
             <div class="field">
               <label>税率</label>
               <div class="ui right labeled input">
-                <input type="number" name="subContractAppend.details.tax" placeholder="税率">
+                <input type="number" name="subContractAppend.details[index].tax" placeholder="税率">
                 <div class="ui basic label">%</div>
               </div>
             </div>
             <div class="field">
               <label>金额</label>
               <div class="ui right labeled input">
-                <input type="number" name="subContractAppend.details.amount" placeholder="金额">
+                <input type="number" name="subContractAppend.details[index].amount" placeholder="金额">
                 <div class="ui basic label">￥</div>
               </div>
             </div>
@@ -533,7 +533,7 @@
           <div class="two fields">
             <div class="field">
               <label>备注</label>
-              <textarea name="subContractAppend.details.remark" rows="2" placeholder="请输入备注"></textarea>
+              <textarea name="subContractAppend.details[index].remark" rows="2" placeholder="请输入备注"></textarea>
             </div>
             <div class="field relative">
               <label class="invisible">按钮</label>
@@ -587,6 +587,7 @@
 <!-- 全局依赖 js === 通用 -->
 <script src="../../plugin/jquery/jquery.3.2.1.min.js"></script>
 <script src="../../plugin/semantic/dist/semantic.min.js"></script>
+<script src="../../plugin/lodash/lodash.min.js"></script>
 <script src="../../plugin/nprogress/nprogress.js"></script>
 <script src="../../plugin/layDate/laydate.js"></script>
 <script src="../../src/js/helper.js"></script>
