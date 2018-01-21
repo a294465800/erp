@@ -243,7 +243,7 @@
     <!-- 中标情况 -->
     <h4 class="ui dividing header violet">合同中标情况</h4>
     <div class="form-wrap" id="winBid">
-      <div class="win-item data-dom" data-id=1 data-index=0 data-name="masterCompany">
+      <div class="win-item data-dom" data-id=1 data-index=0 data-name="masterCompany[index]">
         <div class="inline fields">
           <div class="eight wide field fields">
             <label class="five wide field">单位名称</label>
@@ -286,7 +286,7 @@
     <!-- 分包情况 -->
     <h4 class="ui dividing header blue">分包情况</h4>
     <div class="form-wrap" id="divideBid">
-      <div class="win-item data-dom" data-id=1 data-index=0 data-name="subCompany">
+      <div class="win-item data-dom" data-id=1 data-index=0 data-name="subCompany[index]">
         <div class="inline fields">
           <div class="eight wide field fields">
             <label class="five wide field">发包单位</label>
@@ -348,7 +348,7 @@
           <div class="three fields">
             <div class="field">
               <label>内容名称</label>
-              <input class="masterContract.details[index].name" type="text" name="project_item" placeholder="请输入内容名称">
+              <input type="text" name="masterContract.details[index].name" placeholder="请输入内容名称">
             </div>
             <div class="field">
               <label>税率</label>
@@ -398,7 +398,7 @@
           <div class="three fields">
             <div class="field">
               <label>内容名称</label>
-              <input class="masterContractAppend.details[index].name" type="text" name="project_item" placeholder="请输入内容名称">
+              <input type="text" name="masterContractAppend.details[index].name" placeholder="请输入内容名称">
             </div>
             <div class="field">
               <label>税率</label>
@@ -463,7 +463,7 @@
           <div class="three fields">
             <div class="field">
               <label>内容名称</label>
-              <input class="subContract.details[index].name" type="text" name="project_item" placeholder="请输入内容名称">
+              <input type="text" name="subContract.details[index].name" placeholder="请输入内容名称">
             </div>
             <div class="field">
               <label>税率</label>
@@ -513,7 +513,7 @@
           <div class="three fields">
             <div class="field">
               <label>内容名称</label>
-              <input class="subContractAppend.details[index].name" type="text" name="project_item" placeholder="请输入内容名称">
+              <input type="text" name="subContractAppend.details[index].name" placeholder="请输入内容名称">
             </div>
             <div class="field">
               <label>税率</label>
@@ -567,17 +567,117 @@
             <div class="value" id="projectTotalFinalMoneyShow">0 ￥</div>
           </div>
         </div>
-
       </div>
     </div>
     <!-- / 项目实际情况 -->
 
     <!-- 履约保证金情况 -->
     <h4 class="ui dividing header blue">履约保证金情况</h4>
-    <div class="form-wrap">
-
+    <div id="marginsItem">
+      <div class="field data-dom" data-id=1 data-index=0 data-name="margins[index]">
+        <div class="three fields">
+          <div class="field">
+            <label>支付日期</label>
+            <input type="text" id="margins0" name="margins[index].date" placeholder="请选择日期">
+          </div>
+          <div class="field">
+            <label>支付金额</label>
+            <div class="ui right labeled input">
+              <input type="number" name="margins[index].amount" placeholder="金额">
+              <div class="ui basic label">￥</div>
+            </div>
+          </div>
+          <div class="field">
+            <label>收款人</label>
+            <input type="text" name="margins[index].payee" placeholder="请输入收款人">
+          </div>
+        </div>
+        <div class="two fields">
+          <div class="field">
+            <label>回收条件</label>
+            <textarea name="margins[index].recycle" rows="2" placeholder="请输入回收条件"></textarea>
+          </div>
+          <div class="field relative">
+            <label class="invisible">按钮</label>
+            <div class=" ui button red project-item-del">
+              <i class="icon remove"></i>
+              <span>删除该项</span>
+            </div>
+          </div>
+        </div>
+        <h4 class="ui horizontal divider header ">
+          <i class="icon remove bookmark"></i>
+        </h4>
+      </div>
+      <div class="ui center aligned basic segment">
+        <div class="ui blue labeled icon button" id="addMarginItem">
+          <span>新增保证金情况</span>
+          <i class="add icon"></i>
+        </div>
+      </div>
     </div>
     <!-- / 履约保证金情况 -->
+
+    <!-- 收款条件 -->
+    <h4 class="ui dividing header violet">收款条件</h4>
+    <div id="paymentConditionItem">
+      <div class="field data-dom" data-id=1 data-index=0 data-name="paymentConditions[index]">
+        <div class="two fields">
+          <div class="field">
+            <label>收款比例</label>
+            <div class="ui right labeled input">
+              <input type="number" name="paymentConditions[index].rate" placeholder="请输入收款比例">
+              <div class="ui basic label">%</div>
+            </div>
+          </div>
+          <div class="field">
+            <label>预计金额</label>
+            <div class="ui right labeled input">
+              <input type="number" name="paymentConditions[index].expected" placeholder="请输入预计金额">
+              <div class="ui basic label">￥</div>
+            </div>
+          </div>
+        </div>
+        <div class="two fields">
+          <div class="field">
+            <label>收款条件</label>
+            <textarea name="paymentConditions[index].condition" rows="2" placeholder="请输入收款条件"></textarea>
+          </div>
+          <div class="field relative">
+            <label class="invisible">按钮</label>
+            <div class=" ui button red project-item-del">
+              <i class="icon remove"></i>
+              <span>删除该项</span>
+            </div>
+          </div>
+        </div>
+        <h4 class="ui horizontal divider header ">
+          <i class="icon remove bookmark"></i>
+        </h4>
+      </div>
+      <div class="ui center aligned basic segment">
+        <div class="ui blue labeled icon button" id="addConditionItem">
+          <span>新增收款条件</span>
+          <i class="add icon"></i>
+        </div>
+      </div>
+    </div>
+    <!-- 收款条件 -->
+
+    <!-- 合同 -->
+    <h4 class="ui dividing header blue">合同</h4>
+    <div class="ui center aligned basic segment">
+      <div id="contarctFiles"></div>
+      <div>
+        <input type="file" id="contractUpload" hidden>
+        <label for="contractUpload" class="ui blue labeled icon button">
+          <i class="upload icon"></i>
+          <span>上传合同</span>
+        </label>
+      </div>
+    </div>
+    <!-- /合同 -->
+
   </form>
 </div>
 
