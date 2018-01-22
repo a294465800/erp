@@ -207,22 +207,22 @@
       <div class="inline fields">
         <div class="eight wide field fields">
           <label class="five wide field">立项日期</label>
-          <input name="signDate" id="createDate" type="text" placeholder="请选择立项日期">
+          <input name="signDate" id="createDate" type="text" placeholder="请选择立项日期" required>
         </div>
         <div class="eight wide field fields">
           <label class="five wide field">项目名</label>
-          <input name="name" type="text" placeholder="请输入项目名">
+          <input name="name" type="text" placeholder="请输入项目名" required>
         </div>
       </div>
       <div class="inline fields">
         <div class="eight wide field fields">
           <label class="five wide field">甲方</label>
-          <input name="partyA" type="text" placeholder="请输入甲方">
+          <input name="partyA" type="text" placeholder="请输入甲方" required>
         </div>
         <div class="eight wide field fields">
           <label class="five wide field">项目合同金额</label>
           <div class="ui right labeled input">
-            <input name="amount" type="number" placeholder="请输入项目合同金额">
+            <input name="amount" type="number" placeholder="请输入项目合同金额" required>
             <div class="ui basic label">￥</div>
           </div>
         </div>
@@ -230,11 +230,11 @@
       <div class="inline fields">
         <div class="eight wide field fields">
           <label class="five wide field">预计完工日期</label>
-          <input name="completeDate" id="completeDate" type="text" placeholder="请选择预计完工日期">
+          <input name="completeDate" id="completeDate" type="text" placeholder="请选择预计完工日期" required>
         </div>
         <div class="eight wide field fields">
           <label class="five wide field">项目经理</label>
-          <input name="manager" type="text" placeholder="请输入项目经理">
+          <input name="manager" type="text" placeholder="请输入项目经理" required>
         </div>
       </div>
     </div>
@@ -247,12 +247,12 @@
         <div class="inline fields">
           <div class="eight wide field fields">
             <label class="five wide field">单位名称</label>
-            <input name="masterCompany[index].name" type="text" placeholder="请输入单位名称" class="win-company">
+            <input name="masterCompany[index].name" type="text" placeholder="请输入单位名称" class="win-company" required>
           </div>
           <div class="eight wide field fields">
             <label class="five wide field">金额</label>
             <div class="ui right labeled input">
-              <input name="masterCompany[index].amount" type="number" placeholder="请输入金额">
+              <input name="masterCompany[index].amount" type="number" placeholder="请输入金额" required>
               <div class="ui basic label">￥</div>
             </div>
           </div>
@@ -290,12 +290,12 @@
         <div class="inline fields">
           <div class="eight wide field fields">
             <label class="five wide field">发包单位</label>
-            <input name="subCompany[index].name" type="text" placeholder="请输入发包单位" class="win-company">
+            <input name="subCompany[index].name" type="text" placeholder="请输入发包单位" class="win-company" required>
           </div>
           <div class="eight wide field fields">
             <label class="five wide field">分包金额</label>
             <div class="ui right labeled input">
-              <input name="subCompany[index].amount" type="number" placeholder="请输入分包金额">
+              <input name="subCompany[index].amount" type="number" placeholder="请输入分包金额" required>
               <div class="ui basic label">￥</div>
             </div>
           </div>
@@ -330,116 +330,87 @@
     <h4 class="ui dividing header violet">项目实际情况</h4>
     <div class="form-wrap">
       <div id="detailItem">
-
-        <input type="number" hidden id="projectMainFinalMoney">
-        <input type="number" hidden id="projectDivideFinalMoney">
-
         <!-- 主合同 -->
-        <div class="inline fields">
-          <div class="eight wide field fields">
-            <label class="five wide field">主合同金额</label>
-            <div class="ui right labeled input">
-              <input name="masterContract.amount" type="number" placeholder="请输入主合同金额" id="projectMainMoney">
-              <div class="ui basic label">￥</div>
-            </div>
-          </div>
-        </div>
-        <div class="field detail-item data-dom" data-id=1 data-index=0 data-name="masterContract.details[index]">
-          <div class="three fields">
-            <div class="field">
-              <label>内容名称</label>
-              <input type="text" name="masterContract.details[index].name" placeholder="请输入内容名称">
-            </div>
-            <div class="field">
-              <label>税率</label>
+        <div class="contract-item">
+          <div class="inline fields data-dom" data-id=1 data-index=0 data-name="masterContract[0].details[0]">
+            <div class="eight wide field fields">
+              <label class="five wide field">主合同金额</label>
               <div class="ui right labeled input">
-                <input type="number" name="masterContract.details[index].tax" placeholder="税率">
-                <div class="ui basic label">%</div>
-              </div>
-            </div>
-            <div class="field">
-              <label>金额</label>
-              <div class="ui right labeled input">
-                <input type="number" name="masterContract.details[index].amount" placeholder="金额">
+                <input name="masterContract[0].amount" type="number" placeholder="请输入主合同金额" required>
                 <div class="ui basic label">￥</div>
               </div>
             </div>
           </div>
-          <div class="two fields">
-            <div class="field">
-              <label>备注</label>
-              <textarea name="masterContract.details[index].remark" rows="2" placeholder="请输入备注"></textarea>
-            </div>
-            <div class="field relative">
-              <label class="invisible">按钮</label>
-              <div class=" ui button red project-item-del">
-                <i class="icon remove"></i>
-                <span>删除该项</span>
+          <div class="field detail-item data-dom" data-id=1 data-index=0 data-name="masterContract[0].details[0]">
+            <div class="three fields">
+              <div class="field">
+                <label>内容名称</label>
+                <div class="ui fluid search selection dropdown">
+                  <input type="hidden" class="real-search" name="masterContract[0].details[0].name" required>
+                  <i class="dropdown icon"></i>
+                  <div class="default text">请选择内容</div>
+                  <div class="menu" id="contentSelects">
+                    <div class="item" data-value="内容一">内容一</div>
+                    <div class="item" data-value="内容二">内容二</div>
+                    <div class="item" data-value="内容三">内容三</div>
+                  </div>
+                </div>
               </div>
+              <div class="field">
+                <label>税率</label>
+                <div class="ui fluid search selection dropdown">
+                  <input type="hidden" class="real-search" name="masterContract[0].details[0].tax" required>
+                  <i class="dropdown icon"></i>
+                  <div class="default text">请选择税率</div>
+                  <div class="menu" id="taxSelects">
+                    <div class="item" data-value="5%">5%</div>
+                    <div class="item" data-value="9%">9%</div>
+                    <div class="item" data-value="17%">17%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <label>金额</label>
+                <div class="ui right labeled input">
+                  <input type="number" name="masterContract[0].details[0].amount" placeholder="金额" required>
+                  <div class="ui basic label">￥</div>
+                </div>
+              </div>
+            </div>
+            <div class="two fields">
+              <div class="field">
+                <label>备注</label>
+                <textarea name="masterContract[0].details[0].remark" rows="2" placeholder="请输入备注"></textarea>
+              </div>
+              <div class="field relative">
+                <label class="invisible">按钮</label>
+                <div class=" ui button red project-item-del">
+                  <i class="icon remove"></i>
+                  <span>删除该项</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ui center aligned basic segment">
+            <div class="ui blue labeled icon button addBidNewItem">
+              <span>新增内容</span>
+              <i class="add icon"></i>
             </div>
           </div>
         </div>
         <div class="ui center aligned basic segment">
-          <div class="ui blue labeled icon button" id="addBidNewItem">
-            <span>新增内容</span>
+          <div class="ui blue labeled icon button" id="addNewMasterAppend">
+            <span>新增后期追加</span>
             <i class="add icon"></i>
           </div>
         </div>
-        <div class="inline fields">
-          <div class="eight wide field fields">
-            <label class="five wide field">后期追加或减少金额</label>
-            <div class="ui right labeled input">
-              <input name="masterContractAppend.amount" type="number" placeholder="请输入后期追加或减少金额" id="projectMainExtraMoney">
-              <div class="ui basic label">￥</div>
-            </div>
+        <div class="inline-center">
+          <div class="ui button teal checkContract" data-name="masterContract">
+            <i class="icon yen"></i>
+            <span>核对主合同金额</span>
           </div>
         </div>
-        <div class="field detail-item data-dom" data-id=1 data-index=0 data-name="masterContractAppend.details[index]">
-          <div class="three fields">
-            <div class="field">
-              <label>内容名称</label>
-              <input type="text" name="masterContractAppend.details[index].name" placeholder="请输入内容名称">
-            </div>
-            <div class="field">
-              <label>税率</label>
-              <div class="ui right labeled input">
-                <input type="number" name="masterContractAppend.details[index].tax" placeholder="税率">
-                <div class="ui basic label">%</div>
-              </div>
-            </div>
-            <div class="field">
-              <label>金额</label>
-              <div class="ui right labeled input">
-                <input type="number" name="masterContractAppend.details[index].amount" placeholder="金额">
-                <div class="ui basic label">￥</div>
-              </div>
-            </div>
-          </div>
-          <div class="two fields">
-            <div class="field">
-              <label>备注</label>
-              <textarea name="masterContractAppend.details[index].remark" rows="2" placeholder="请输入备注"></textarea>
-            </div>
-            <div class="field relative">
-              <label class="invisible">按钮</label>
-              <div class=" ui button red project-item-del">
-                <i class="icon remove"></i>
-                <span>删除该项</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="ui center aligned basic segment">
-          <div class="ui blue labeled icon button" id="addBidBackNewItem">
-            <span>新增内容</span>
-            <i class="add icon"></i>
-          </div>
-        </div>
-        <div class="ui center aligned basic segment">
-          <div class="ui horizontal statistic orange">
-            <div class="label">主合同金额： </div>
-            <div class="value" id="projectMainFinalMoneyShow">0 ￥</div>
-          </div>
+        <div class="check-result">
         </div>
         <h4 class="ui horizontal divider header">
           <i class="icon file text"></i>
@@ -450,111 +421,86 @@
         <div class="margin-top-50"></div>
 
         <!-- 分包合同 -->
-        <div class="inline fields">
-          <div class="eight wide field fields">
-            <label class="five wide field">分包合同金额</label>
-            <div class="ui right labeled input">
-              <input name="divide_price" type="subContract.amount" placeholder="请输入分包合同金额" id="projectDivideMoney">
-              <div class="ui basic label">￥</div>
-            </div>
-          </div>
-        </div>
-        <div class="field detail-item data-dom" data-id=1 data-index=0 data-name="subContract.details[index]">
-          <div class="three fields">
-            <div class="field">
-              <label>内容名称</label>
-              <input type="text" name="subContract.details[index].name" placeholder="请输入内容名称">
-            </div>
-            <div class="field">
-              <label>税率</label>
+        <div class="contract-item">
+          <div class="inline fields">
+            <div class="eight wide field fields">
+              <label class="five wide field">分包合同金额</label>
               <div class="ui right labeled input">
-                <input type="number" name="subContract.details[index].tax" placeholder="税率">
-                <div class="ui basic label">%</div>
-              </div>
-            </div>
-            <div class="field">
-              <label>金额</label>
-              <div class="ui right labeled input">
-                <input type="number" name="subContract.details[index].amount" placeholder="金额">
+                <input name="subContract[0].amount" type="number" placeholder="请输入分包合同金额" required>
                 <div class="ui basic label">￥</div>
               </div>
             </div>
           </div>
-          <div class="two fields">
-            <div class="field">
-              <label>备注</label>
-              <textarea name="subContract.details[index].remark" rows="2" placeholder="请输入备注"></textarea>
-            </div>
-            <div class="field relative">
-              <label class="invisible">按钮</label>
-              <div class=" ui button red project-item-del">
-                <i class="icon remove"></i>
-                <span>删除该项</span>
+          <div class="field detail-item data-dom" data-id=1 data-index=0 data-name="subContract[0].details[0]">
+            <div class="three fields">
+              <div class="field">
+                <label>内容名称</label>
+                <div class="ui fluid search selection dropdown">
+                  <input type="hidden" class="real-search" name="subContract[0].details[0].name" required>
+                  <i class="dropdown icon"></i>
+                  <div class="default text">请选择内容</div>
+                  <div class="menu">
+                    <div class="item" data-value="内容一">内容一</div>
+                    <div class="item" data-value="内容二">内容二</div>
+                    <div class="item" data-value="内容三">内容三</div>
+                  </div>
+                </div>
               </div>
+              <div class="field">
+                <label>税率</label>
+                <div class="ui fluid search selection dropdown">
+                  <input type="hidden" class="real-search" name="subContract[0].details[0].tax" required>
+                  <i class="dropdown icon"></i>
+                  <div class="default text">请选择税率</div>
+                  <div class="menu">
+                    <div class="item" data-value="5%">5%</div>
+                    <div class="item" data-value="9%">9%</div>
+                    <div class="item" data-value="17%">17%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <label>金额</label>
+                <div class="ui right labeled input">
+                  <input type="number" name="subContract[0].details[0].amount" placeholder="金额" required>
+                  <div class="ui basic label">￥</div>
+                </div>
+              </div>
+            </div>
+            <div class="two fields">
+              <div class="field">
+                <label>备注</label>
+                <textarea name="subContract[0].details[0].remark" rows="2" placeholder="请输入备注"></textarea>
+              </div>
+              <div class="field relative">
+                <label class="invisible">按钮</label>
+                <div class=" ui button red project-item-del">
+                  <i class="icon remove"></i>
+                  <span>删除该项</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ui center aligned basic segment">
+            <div class="ui blue labeled icon button addBidDivideNewItem">
+              <span>新增内容</span>
+              <i class="add icon"></i>
             </div>
           </div>
         </div>
         <div class="ui center aligned basic segment">
-          <div class="ui blue labeled icon button" id="addBidDivideNewItem">
-            <span>新增内容</span>
+          <div class="ui blue labeled icon button" id="addNewSubAppend">
+            <span>新增后期追加</span>
             <i class="add icon"></i>
           </div>
         </div>
-        <div class="inline fields">
-          <div class="eight wide field fields">
-            <label class="five wide field">后期追加或减少金额</label>
-            <div class="ui right labeled input">
-              <input name="subContractAppend.amount" type="number" placeholder="请输入后期追加或减少金额" id="projectDivideExtraMoney">
-              <div class="ui basic label">￥</div>
-            </div>
+        <div class="inline-center">
+          <div class="ui button teal checkContract" data-name="subContract">
+            <i class="icon yen"></i>
+            <span>核对分包合同金额</span>
           </div>
         </div>
-        <div class="field detail-item data-dom" data-id=1 data-index=0 data-name="subContractAppend.details[index]">
-          <div class="three fields">
-            <div class="field">
-              <label>内容名称</label>
-              <input type="text" name="subContractAppend.details[index].name" placeholder="请输入内容名称">
-            </div>
-            <div class="field">
-              <label>税率</label>
-              <div class="ui right labeled input">
-                <input type="number" name="subContractAppend.details[index].tax" placeholder="税率">
-                <div class="ui basic label">%</div>
-              </div>
-            </div>
-            <div class="field">
-              <label>金额</label>
-              <div class="ui right labeled input">
-                <input type="number" name="subContractAppend.details[index].amount" placeholder="金额">
-                <div class="ui basic label">￥</div>
-              </div>
-            </div>
-          </div>
-          <div class="two fields">
-            <div class="field">
-              <label>备注</label>
-              <textarea name="subContractAppend.details[index].remark" rows="2" placeholder="请输入备注"></textarea>
-            </div>
-            <div class="field relative">
-              <label class="invisible">按钮</label>
-              <div class=" ui button red project-item-del">
-                <i class="icon remove"></i>
-                <span>删除该项</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="ui center aligned basic segment">
-          <div class="ui blue labeled icon button" id="addBidDivideBackNewItem">
-            <span>新增内容</span>
-            <i class="add icon"></i>
-          </div>
-        </div>
-        <div class="ui center aligned basic segment">
-          <div class="ui horizontal statistic orange">
-            <div class="label">分包合同金额： </div>
-            <div class="value" id="projectDivideFinalMoneyShow">0 ￥</div>
-          </div>
+        <div class="check-result">
         </div>
         <h4 class="ui horizontal divider header">
           <i class="icon file text"></i>
@@ -578,18 +524,18 @@
         <div class="three fields">
           <div class="field">
             <label>支付日期</label>
-            <input type="text" id="margins0" name="margins[index].date" placeholder="请选择日期">
+            <input type="text" id="margins0" name="margins[index].date" placeholder="请选择日期" required>
           </div>
           <div class="field">
             <label>支付金额</label>
             <div class="ui right labeled input">
-              <input type="number" name="margins[index].amount" placeholder="金额">
+              <input type="number" name="margins[index].amount" placeholder="金额" required>
               <div class="ui basic label">￥</div>
             </div>
           </div>
           <div class="field">
             <label>收款人</label>
-            <input type="text" name="margins[index].payee" placeholder="请输入收款人">
+            <input type="text" name="margins[index].payee" placeholder="请输入收款人" required>
           </div>
         </div>
         <div class="two fields">
@@ -626,14 +572,14 @@
           <div class="field">
             <label>收款比例</label>
             <div class="ui right labeled input">
-              <input type="number" name="paymentConditions[index].rate" placeholder="请输入收款比例">
+              <input type="number" name="paymentConditions[index].rate" placeholder="请输入收款比例" required>
               <div class="ui basic label">%</div>
             </div>
           </div>
           <div class="field">
             <label>预计金额</label>
             <div class="ui right labeled input">
-              <input type="number" name="paymentConditions[index].expected" placeholder="请输入预计金额">
+              <input type="number" name="paymentConditions[index].expected" placeholder="请输入预计金额" required>
               <div class="ui basic label">￥</div>
             </div>
           </div>
@@ -678,6 +624,12 @@
     </div>
     <!-- /合同 -->
 
+    <div class="inline-center">
+      <button class="ui button green large" type="submit">
+        <i class="icon hand pointer"></i>
+        <span>提交</span>
+      </button>
+    </div>
   </form>
 </div>
 
