@@ -1,1 +1,0 @@
-"use strict";$(document).ready(function(){_helper.setActiveNav("#navProject",".list")});

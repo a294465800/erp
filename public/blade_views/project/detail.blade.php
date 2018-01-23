@@ -1,20 +1,16 @@
 <include src="../template/header.html">
-  @title = 已立项清单
+  @title = 项目明细清单
 </include>
 
 <div class="ui breadcrumb">
   <a class="section">项目立项管理</a>
   <div class="divider"> / </div>
-  <div class="active section">已立项清单</div>
+  <div class="active section">项目明细清单</div>
 </div>
 
 <!-- 操作区域 -->
 <div class="content-operation flex-row flex-between">
   <div>
-    <a class="ui primary button" href="../project/create.html">
-      <i class="icon plus"></i>
-      <span>新建立项</span>
-    </a>
     <a class="ui green button" href="#">
       <i class="icon download"></i>
       <span>Excel 导出</span>
@@ -28,7 +24,6 @@
       <div class="menu">
         <div class="item" data-value="1">项目号</div>
         <div class="item" data-value="2">项目内容</div>
-        <div class="item" data-value="3">甲方</div>
       </div>
     </div>
     <input type="text" placeholder="搜索内容" value="">
@@ -37,80 +32,100 @@
 </div>
 <!-- / 操作区域 -->
 
-<div class="content-wrap">
 
-  <table class="ui striped table" id="projectDetailTable">
+<!-- 表格循环 -->
+<div class="content-wrap">
+  <table class="ui celled structured table">
     <thead>
       <tr>
-        <th>项目号</th>
-        <th>立项日期</th>
-        <th>项目内容</th>
-        <th>项目经理</th>
-        <th>合同金额</th>
-        <th>实际金额</th>
-        <th>甲方</th>
-        <th>主合同金额</th>
-        <th>发包单位</th>
-        <th>分包合同金额</th>
-        <th>合同约定完工日期</th>
+        <th rowspan="2">类型</th>
+        <th rowspan="2">项目</th>
+        <th rowspan="2">内容</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>154376453254</td>
-        <td>2017-12-01</td>
-        <td>这是一大段内容</td>
-        <td>张喜</td>
-        <td>20万</td>
-        <td>30万</td>
-        <td>xx公司</td>
-        <td>20万</td>
-        <td>xx单位</td>
-        <td>10万</td>
-        <td>2018-02-14</td>
+        <td rowspan="4">基本</td>
+        <td>项目号</td>
+        <td>1234232</td>
       </tr>
       <tr>
-        <td>154236453254</td>
-        <td>2017-12-01</td>
-        <td>这是一大段内容</td>
-        <td>张喜</td>
-        <td>20万</td>
-        <td>30万</td>
-        <td>xx公司</td>
-        <td>20万</td>
-        <td>xx单位</td>
-        <td>10万</td>
-        <td>2018-02-14</td>
+        <td>项目内容</td>
+        <td class="detail__content">这是项目内容这是项目内容这是项目内容这是项目内容</td>
       </tr>
       <tr>
-        <td>154376453254</td>
-        <td>2017-12-01</td>
-        <td>这是一大段内容</td>
-        <td>张喜</td>
-        <td>20万</td>
-        <td>30万</td>
-        <td>xx公司</td>
-        <td>20万</td>
-        <td>xx单位</td>
-        <td>10万</td>
-        <td>2018-02-14</td>
+        <td>项目经理</td>
+        <td>程先生</td>
       </tr>
       <tr>
-        <td>154376453254</td>
-        <td>2017-12-01</td>
-        <td>这是一大段内容</td>
-        <td>张喜</td>
-        <td>20万</td>
-        <td>30万</td>
-        <td>xx公司</td>
-        <td>20万</td>
-        <td>xx单位</td>
-        <td>10万</td>
-        <td>2018-02-14</td>
+        <td>合同金额</td>
+        <td>12,423,222 ￥</td>
+      </tr>
+      <tr>
+        <td rowspan="2">
+          <p>项目实际金额</p>
+          <p>22,423,222 ￥</p>
+        </td>
+        <td>主合同金额</td>
+        <td>12,423,222 ￥</td>
+      </tr>
+      <tr>
+        <td>分包合同金额</td>
+        <td>12,423,222 ￥</td>
+      </tr>
+      <tr>
+        <td rowspan="6">金额相关</td>
+        <td>验收金额</td>
+        <td>12,423,222 ￥</td>
+      </tr>
+      <tr>
+        <td>已开票请款</td>
+        <td>12,423,222 ￥</td>
+      </tr>
+      <tr>
+        <td>主合同收款</td>
+        <td>12,423,222 ￥</td>
+      </tr>
+      <tr>
+        <td>分包合同收款</td>
+        <td>12,423,222 ￥</td>
+      </tr>
+      <tr>
+        <td>应收账款</td>
+        <td>12,423,222 ￥</td>
+      </tr>
+      <tr>
+        <td>项目剩余未收款</td>
+        <td>12,423,222 ￥</td>
+      </tr>
+      <tr>
+        <td rowspan="5">
+          <p>已发生成本</p>
+          <p>12,423,222 ￥</p>
+        </td>
+        <td>领料成本</td>
+        <td>12,423,222 ￥</td>
+      </tr>
+      <tr>
+        <td>施工成本</td>
+        <td>12,423,222 ￥</td>
+      </tr>
+      <tr>
+        <td>报销项目成本</td>
+        <td>12,423,222 ￥</td>
+      </tr>
+      <tr>
+        <td>费用付款其他成本</td>
+        <td>12,423,222 ￥</td>
+      </tr>
+      <tr>
+        <td>退料成本</td>
+        <td>12,423,222 ￥</td>
       </tr>
     </tbody>
   </table>
 </div>
+<!-- / 表格循环 -->
 
 <include src="../template/footer.html">
   @js = ../../src/js/project_detail.js

@@ -74,8 +74,20 @@
         </div>
         <div class="content">
           <div class="ui secondary vertical menu">
-            <a class="item detail">项目明细清单</a>
-            <a class="item list" href="../project/detail.html">已立项清单</a>
+            <a class="item detail" href="../project/detail.html">项目明细清单</a>
+            <a class="item list" href="../project/list.html">已立项清单</a>
+          </div>
+        </div>
+      </div>
+      <div class="item" id="navBudge">
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <span>
+            <i class="icon hashtag"></i>预算管理</span>
+        </div>
+        <div class="content">
+          <div class="ui secondary vertical menu">
+            <a class="item list">预算清单</a>
           </div>
         </div>
       </div>
