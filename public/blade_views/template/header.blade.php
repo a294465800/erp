@@ -79,7 +79,7 @@
           </div>
         </div>
       </div>
-      <div class="item" id="navBudge">
+      <div class="item" id="navBudget">
         <div class="title">
           <i class="dropdown icon"></i>
           <span>
