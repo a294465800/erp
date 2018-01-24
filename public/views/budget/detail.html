@@ -12,7 +12,7 @@
 <link rel="stylesheet" type="text/css" href="../../src/css/erp.css">
 <!-- /全局依赖 -->
 
-  <title>预算清单</title>
+  <title>查看预算 - 15823910212</title>
 </head>
 
 <body id="index">
@@ -206,135 +206,246 @@
 <div class="ui breadcrumb">
   <a class="section">预算管理</a>
   <div class="divider"> / </div>
-  <div class="active section">预算清单</div>
+  <a class="section" href="../budget/list.html">预算清单</a>
+  <div class="divider"> / </div>
+  <div class="active section">查看预算 - 15823910212</div>
 </div>
 
-<!-- 操作区域 -->
-<div class="content-operation flex-row flex-between">
-  <div>
-    <a class="ui green button" href="#">
-      <i class="icon download"></i>
-      <span>Excel 导出</span>
-    </a>
+<div class="margin-top-20" id="project-check">
+  <!-- 基本信息 -->
+  <h4 class="ui dividing header blue">基本信息</h4>
+  <div class="check-item">
+    <table class="ui very basic table selectable center aligned">
+      <thead>
+        <tr></tr>
+        <th>立项日期</th>
+        <th>项目名</th>
+        <th>甲方</th>
+        <th>项目合同金额</th>
+        <th>预计完工日期</th>
+        <th>项目经理</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2017-08-22</td>
+          <td>朗朗项目</td>
+          <td>用和友谊公司</td>
+          <td>200,000,232 ￥</td>
+          <td>2017-11-22</td>
+          <td>程经理</td>
+        </tr>
+        <tr>
+      </tbody>
+    </table>
   </div>
-  <div class="ui left action right input fluid flex-fluid">
-    <div class="ui button white dropdown ">
-      <input name="seartch-type" type="hidden">
-      <div class="text">请选中搜索内容</div>
-      <i class="dropdown icon"></i>
-      <div class="menu">
-        <div class="item" data-value="1">项目号</div>
-        <div class="item" data-value="2">项目内容</div>
-      </div>
-    </div>
-    <input type="text" placeholder="搜索内容" value="">
-    <button class="ui button">搜索</button>
-  </div>
-</div>
-<!-- / 操作区域 -->
+  <!-- /基本信息 -->
 
-<!-- 表格循环 -->
-<div class="content-wrap">
-  <table class="ui celled structured table">
-    <thead>
-      <tr>
-        <th rowspan="2">类型</th>
-        <th rowspan="2">项目</th>
-        <th rowspan="2">内容</th>
-        <th rowspan="2">金额相关</th>
-        <th rowspan="2">金额类型</th>
-        <th rowspan="2">金额</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td rowspan="5">基本</td>
-        <td>项目号</td>
-        <td>1234232</td>
-        <td rowspan="2">
-          <p>项目实际金额</p>
-          <p>12,423,222 ￥</p>
-        </td>
-        <td>主合同金额</td>
-        <td>12,423,222 ￥</td>
-      </tr>
-      <tr>
-        <td>项目内容</td>
-        <td class="detail__content">这是项目内容这是项目内容这是项目内容这是项目内容</td>
-        <td>分包合同金额</td>
-        <td>12,423,222 ￥</td>
-      </tr>
-      <tr>
-        <td>项目经理</td>
-        <td>程先生</td>
-        <td rowspan="3">
-          <p>预算总金额</p>
-          <p>12,423,222 ￥</p>
-        </td>
-        <td>物料采购金额</td>
-        <td>12,423,222 ￥</td>
-      </tr>
-      <tr>
-        <td>合同金额</td>
-        <td>12,423,222 ￥</td>
-        <td>工程金额</td>
-        <td>12,423,222 ￥</td>
-      </tr>
-      <tr>
-        <td>验收金额</td>
-        <td>12,423,222 ￥</td>
-        <td>其他</td>
-        <td>12,423,222 ￥</td>
-      </tr>
-      <tr>
-        <td class="center aligned" style="font-size: 40px;" colspan="3" rowspan="7">
-          <a href="../budget/detail.html">查看</a>
-        </td>
-        <td rowspan="7">
-          <p>已发生成本</p>
-          <p>12,423,222 ￥</p>
-        </td>
-        <td>领料成本</td>
-        <td>12,423,222 ￥</td>
-      </tr>
-      <tr>
-        <td>施工成本</td>
-        <td>12,423,222 ￥</td>
-      </tr>
-      <tr>
-        <td rowspan="3">
-          <p>报销项目成本</p>
-          <p>12,423,222 ￥</p>
-        </td>
-        <td>
-          <p>报销材料款</p>
-          <p>12,423,222 ￥</p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>报销材料款</p>
-          <p>12,423,222 ￥</p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>报销工程款</p>
-          <p>12,423,222 ￥</p>
-        </td>
-      </tr>
-      <tr>
-        <td>费用付款其他成本</td>
-        <td>12,423,222 ￥</td>
-      </tr>
-      <tr>
-        <td>退料成本</td>
-        <td>12,423,222 ￥</td>
-      </tr>
-    </tbody>
-  </table>
+  <!-- 合同中标情况 -->
+  <h4 class="ui dividing header violet margin-top-50">合同中标情况</h4>
+  <div class="check-item">
+    <table class="ui very basic table selectable center aligned">
+      <thead>
+        <tr>
+          <th>单位名称</th>
+          <th>金额</th>
+          <th>备注</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>百度公司</td>
+          <td>200,000,232 ￥</td>
+          <td>这是备注这是备注这是备注这是备注这是备注这是备注</td>
+        </tr>
+        <tr>
+          <td>百度公司</td>
+          <td>200,000,232 ￥</td>
+          <td>这是备注这是备注这是备注这是备注这是备注这是备注</td>
+        </tr>
+        <tr>
+          <td>百度公司</td>
+          <td>200,000,232 ￥</td>
+          <td>这是备注这是备注这是备注这是备注这是备注这是备注</td>
+        </tr>
+        <tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- /合同中标情况 -->
+
+  <!-- 合同分包情况 -->
+  <h4 class="ui dividing header blue margin-top-50">合同分包情况</h4>
+  <div class="check-item">
+    <table class="ui very basic table selectable center aligned">
+      <thead>
+        <tr>
+          <th>分包单位</th>
+          <th>分包金额</th>
+          <th>备注</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>百度公司</td>
+          <td>200,000,232 ￥</td>
+          <td>这是备注这是备注这是备注这是备注这是备注这是备注</td>
+        </tr>
+        <tr>
+          <td>百度公司</td>
+          <td>200,000,232 ￥</td>
+          <td>这是备注这是备注这是备注这是备注这是备注这是备注</td>
+        </tr>
+        <tr>
+          <td>百度公司</td>
+          <td>200,000,232 ￥</td>
+          <td>这是备注这是备注这是备注这是备注这是备注这是备注</td>
+        </tr>
+        <tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- /合同分包情况 -->
+
+  <!-- 项目实际情况 -->
+  <h4 class="ui dividing header violet margin-top-50">项目实际情况</h4>
+  <div class="check-item">
+    <table class="ui celled structured table">
+      <thead>
+        <tr>
+          <th rowspan="3">类型</th>
+          <th rowspan="3">金额</th>
+          <th colspan="4">具体内容</th>
+        </tr>
+        <tr>
+          <th>内容</th>
+          <th>税率</th>
+          <th>金额</th>
+          <th>备注</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="3">主合同</td>
+          <td rowspan="3">123,542,000 ￥</td>
+          <td>内容一</td>
+          <td>17%</td>
+          <td>123,000 ￥</td>
+          <td>这是备注</td>
+        </tr>
+        <tr>
+          <td>内容二</td>
+          <td>5%</td>
+          <td>123,000 ￥</td>
+          <td>这是备注</td>
+        </tr>
+        <tr>
+          <td>内容三</td>
+          <td>9%</td>
+          <td>123,000 ￥</td>
+          <td>这是备注</td>
+        </tr>
+        <tr>
+          <td rowspan="2">主合同后期追加</td>
+          <td rowspan="2">42,000 ￥</td>
+          <td>内容一</td>
+          <td>17%</td>
+          <td>13,000 ￥</td>
+          <td>这是备注</td>
+        </tr>
+        <tr>
+          <td>内容三</td>
+          <td>5%</td>
+          <td>23,100 ￥</td>
+          <td>这是备注</td>
+        </tr>
+        <tr>
+          <td rowspan="2">分包合同</td>
+          <td rowspan="2">123,542,000 ￥</td>
+          <td>内容一</td>
+          <td>17%</td>
+          <td>123,000 ￥</td>
+          <td>这是备注</td>
+        </tr>
+        <tr>
+          <td>内容三</td>
+          <td>9%</td>
+          <td>123,000 ￥</td>
+          <td>这是备注</td>
+        </tr>
+        <tr>
+          <td rowspan="1">分包合同后期追加</td>
+          <td rowspan="1">42,000 ￥</td>
+          <td>内容一</td>
+          <td>17%</td>
+          <td>13,000 ￥</td>
+          <td>这是备注</td>
+        </tr>
+        <tr>
+          <td rowspan="3">合计</td>
+          <td rowspan="3">123,542,000 ￥</td>
+          <td>内容一</td>
+          <td>17%</td>
+          <td>123,000 ￥</td>
+          <td>/</td>
+        </tr>
+        <tr>
+          <td>内容二</td>
+          <td>9%</td>
+          <td>123,000 ￥</td>
+          <td>/</td>
+        </tr>
+        <tr>
+          <td>内容三</td>
+          <td>9%</td>
+          <td>123,000 ￥</td>
+          <td>/</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- /项目实际情况 -->
+
+  <!-- 预算总额 -->
+  <h4 class="ui dividing header blue margin-top-50">预算总额</h4>
+  <div class="check-item">
+    <table class="ui celled structured table">
+      <thead>
+        <tr>
+          <th rowspan="2">类型</th>
+          <th rowspan="2">金额</th>
+          <th rowspan="2">具体内容</th>
+          <th rowspan="2">具体金额</th>
+          <th rowspan="2">操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="3">预算总额</td>
+          <td rowspan="3">111,542,000 ￥</td>
+          <td>物料采购金额</td>
+          <td>111,542,000 ￥</td>
+          <td rowspan="3">
+            <a href="#">查看预算清单</a>
+          </td>
+        </tr>
+        <tr>
+          <td>工程金额</td>
+          <td>111,542,000 ￥</td>
+        </tr>
+        <tr>
+          <td>其他</td>
+          <td>111,542,000 ￥</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- / 预算总额 -->
+  <div class="flex-row flex-center margin-top-50">
+    <a class="ui button primary" href="#">录入 / 修改预算清单</a>
+    <a class="ui button green" href="#">导出预算清单格式</a>
+  </div>
 </div>
-<!-- / 表格循环 -->
 
 </div>
 <!-- /主体内容 === 不可复用 -->
@@ -353,7 +464,7 @@
 <script src="../../src/js/global.js"></script>
 <!-- / 全局依赖 js === 通用 -->
 <!-- 独立 js -->
-<script src="../../src/js/budget_list.js"></script>
+<script src="../../src/js/budget_check.js"></script>
 <!-- / 独立 js -->
 </body>
 

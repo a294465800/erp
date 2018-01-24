@@ -1,1 +1,1 @@
-"use strict";$(document).ready(function(){_helper.setActiveNav("#navBudget",".list");var e=new _http.ProjectManger;console.log(e),e.createUser({a:1,b:2}).then(function(e){console.log(e)}).catch(function(e){console.log(e)})});
+"use strict";$(document).ready(function(){_helper.setActiveNav("#navBudget",".list");var e=new _http.ProjectManger;console.log(e),e.getBook({a:1,b:2}).then(function(e){console.log(e)}).catch(function(e){console.log(e)})});
